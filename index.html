@@ -366,6 +366,14 @@ table.cred th{color:var(--mu);font-size:11.5px;letter-spacing:.1em;text-transfor
 </style>
 </head>
 <body>
+<div id="splash" style="position:fixed;inset:0;z-index:9999;background:#0a0f16;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;color:#e6edf5;font-family:system-ui,sans-serif;">
+  <img src="https://www.nasa.gov/wp-content/uploads/2023/09/nasa-logo-web-rgb.png" alt="NASA" style="height:120px;filter:drop-shadow(0 0 24px #5cb8ff);" onerror="this.style.display='none'">
+  <div style="font-size:28px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;">Cislunar Junior</div>
+  <div style="font-size:12px;letter-spacing:.18em;color:#8a9bad;">Cañon Labs · NASA Space Apps 2026</div>
+  <div style="width:240px;height:4px;background:#223042;border-radius:2px;overflow:hidden;margin-top:12px;">
+    <div id="splash-bar" style="width:0%;height:100%;background:#5cb8ff;transition:width .3s;"></div>
+  </div>
+</div>
 <div id="app"></div>
 
 <script src="js/orbital.js"></script>
@@ -3249,6 +3257,14 @@ if (typeof document !== 'undefined') {
   else inicio();
 }
 
+</script>
+<script>
+  (function(){
+    var bar=document.getElementById('splash-bar');
+    var s=0;
+    var iv=setInterval(function(){ s=Math.min(100,s+8); if(bar) bar.style.width=s+'%'; if(s>=100) clearInterval(iv); },60);
+    window.addEventListener('load',function(){ setTimeout(function(){ var sp=document.getElementById('splash'); if(sp) sp.style.display='none'; },400); });
+  })();
 </script>
 </body>
 </html>
