@@ -1,29 +1,50 @@
-# Cislunar Junior — Simulador de decisiones de misión espacial
+# Cislunar Junior
 
-**Cañon Labs · NASA Space Apps Challenge 2026**
+> Simulador interactivo de decisiones de misión espacial — Cañon Labs · NASA Space Apps Challenge 2026
 
-Simulador interactivo en el navegador sobre misiones espaciales reales (Apolo 11, Apolo 13, Artemis II y Marte). El jugador gestiona recursos (soporte vital, energía, protección radiación, agua/alimento, propelente) tomando decisiones por evento, y puede volar la misión en un simulador 3D inmersivo con cabina WebGL, o en modo 2D clásico. Incluye Academia de Vuelo (10 lecciones) y Laboratorio de cohetes (diseño de vehículos).
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](#licencia)
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![Platform](https://img.shields.io/badge/platform-web-lightgrey.svg)]()
+[![No dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)]()
 
-## Características
+## 📖 Descripción
 
-- **4 misiones históricas/futuras**: Apolo 11, Apolo 13, Artemis II, Marte.
-- **Simulador de vuelo** con física real (gravedad + J2, atmósfera rotatoria, arrastre Mach-dependiente, empuje vectorial, integración Verlet, actitud por cuaterniones, SAS asistido).
-- **Cabina 3D inmersiva** (WebGL, GLSL) con 6 monitores + pantalla central, o fallback 2D.
-- **Multijugador local** vía `BroadcastChannel`.
-- **Academia de Vuelo**: 10 lecciones progresivas con medallas y certificado.
-- **Laboratorio de cohetes**: constructor de vehículos por etapas, presupuesto Δv (Tsiolkovski), TWR, simulación de ascenso.
-- **Sin dependencias**: HTML5/CSS3/JS puro, sin frameworks ni build.
+**Cislunar Junior** es un simulador en el navegador que recrea misiones espaciales reales (Apolo 11, Apolo 13, Artemis II y Marte). El jugador gestiona recursos (soporte vital, energía, protección contra radiación, agua/alimento y propelente) tomando decisiones por evento, y puede pilotar la misión en un simulador de vuelo con cabina 3D inmersiva o en modo 2D clásico. Incluye una Academia de Vuelo con 10 lecciones y un Laboratorio de cohetes para diseñar vehículos.
 
-## Ejecución
+## ✨ Características principales
+
+- 🚀 **4 misiones** basadas en datos reales de la NASA.
+- 🎮 **Simulador de vuelo** con física orbital y atmosférica (gravedad + J2, arrastre Mach-dependiente, empuje vectorial, integración Verlet, actitud por cuaterniones, asistencia SAS).
+- 🛸 **Cabina 3D inmersiva** (WebGL + GLSL) con 6 monitores y pantalla central, con fallback 2D.
+- 👥 **Multijugador local** mediante `BroadcastChannel`.
+- 🎓 **Academia de Vuelo**: 10 lecciones progresivas con medallas y certificado.
+- 🔬 **Laboratorio de cohetes**: constructor por etapas, presupuesto Δv (Tsiolkovski), TWR y simulación de ascenso.
+- 📴 **Sin dependencias**: HTML5/CSS3/JS puro, sin frameworks ni build.
+
+## 🛠️ Tecnologías
+
+| Capa | Tecnología |
+|---|---|
+| Lenguaje | JavaScript (ES5/ES6), HTML5, CSS3 |
+| Render 3D | WebGL 1.0 + GLSL (shaders propios) |
+| Render 2D | Canvas 2D |
+| Audio | Web Audio API |
+| Persistencia | `localStorage` (envuelto en try/catch) |
+| Multijugador | `BroadcastChannel` |
+| Pruebas | Node.js (scripts en `tools/`) |
+| Servidor | Estático (cualquier HTTP server) |
+
+Sin frameworks, sin bundler, sin npm.
+
+## 🚀 Ejecución
 
 No requiere instalación.
 
 ```bash
 # Opción 1: abrir directamente
-# doble clic en index.html  o  "Cislunar Junior - Cañon Labs.html"
+# doble clic en "Cislunar Junior - Cañon Labs.html"
 
 # Opción 2: servidor estático
-cd "Cislunar Junior"
 python -m http.server 8899
 # abrir http://localhost:8899/
 ```
@@ -39,20 +60,24 @@ node tools\prueba_vehiculos.js
 node tools\prueba_lab.js
 ```
 
-## Estructura
+## 📁 Estructura del proyecto
 
 ```
 Cislunar Junior/
-├── Cislunar Junior - Cañon Labs.html  # entrada principal (standalone)
-├── js/                            # 19 módulos (orbital, vehiculo, flight, stages, mision_vuelo, cabina, cockpit, hud_flight, controls, academia, laboratorio, glcore, ...)
-├── assets/                         # fotos NASA (dominio público)
-├── tools/                          # pruebas, capturas CDP, guiones JSON, análisis APK
-├── docs/screenshots/               # capturas
+├── Cislunar Junior - Cañon Labs.html   # entrada principal (standalone)
+├── js/                                 # 19 módulos
+│   ├── orbital.js, vehiculo.js, flight.js, stages.js, mision_vuelo.js
+│   ├── cabina.js, cockpit.js, hud_flight.js, controls.js
+│   ├── academia.js, laboratorio.js, glcore.js, iconos.js, creditos.js
+│   └── arranque.js, cabina_enlace.js, mision_vuelo.js, ...
+├── assets/                             # fotos NASA (dominio público)
+├── tools/                              # pruebas, capturas CDP, guiones JSON, análisis APK
+├── docs/screenshots/                   # capturas
 ├── README.md
-└── README-CABINA-ORION.md          # spec de cabina Orion
+└── README-CABINA-ORION.md              # spec de cabina Orion
 ```
 
-## Controles (vuelo)
+## 🎮 Controles (vuelo)
 
 | Tecla | Acción |
 |---|---|
@@ -67,11 +92,11 @@ Cislunar Junior/
 | Tab / F1–F6 | Monitores de cabina |
 | `` ` `` | Alternar modo ratón/teclado |
 
-## Capturas
+## 📸 Capturas
 
 ![Menú principal](docs/screenshots/menu.png)
 
-## Recursos gráficos
+## 🖼️ Recursos gráficos
 
 Imágenes NASA de dominio público (ver `js/creditos.js`):
 
@@ -84,10 +109,12 @@ Imágenes NASA de dominio público (ver `js/creditos.js`):
 
 Arte original (iconos vectoriales, modelos 3D procedurales MD2, emblema animado) © Cañon Labs.
 
-## Créditos
+## 👥 Créditos
 
-Datos de misión: NASA (Apolo 11/13, Artemis II, Marte). Imágenes: dominio público NASA. Desarrollo: Cañon Labs.
+- Datos de misión: NASA (Apolo 11/13, Artemis II, Marte).
+- Imágenes: dominio público NASA.
+- Desarrollo: Cañon Labs.
 
-## Licencia
+## 📄 Licencia
 
 Código del proyecto © Cañon Labs. Imágenes NASA en dominio público.
