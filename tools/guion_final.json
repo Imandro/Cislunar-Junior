@@ -1,0 +1,21 @@
+{
+  "puerto": 9333,
+  "url": "http://127.0.0.1:8899/Cislunar%20Junior%20-%20Ca%C3%B1on%20Labs.html?final=2",
+  "ancho": 1800, "alto": 1150,
+  "salida": "C:/Users/Zbook de Mario/AppData/Local/Temp/capturas",
+  "esperaInicial": 4500,
+  "pasos": [
+    { "js": "nuevaPartida(1); ANIM=1; AJ.rotar=0; S.i=4; GR(); VM=0; pintar();", "espera": 450, "salida": "z1_ap13_dock.png" },
+    { "js": "nuevaPartida(0); ANIM=1; AJ.rotar=0; S.i=2; GR(); VM=0; pintar();", "espera": 450, "salida": "z2_ap11_descenso.png" },
+    { "js": "S.i=4; GR(); pintar();", "espera": 450, "salida": "z3_ap11_eva.png" },
+    { "js": "S.i=5; GR(); pintar();", "espera": 450, "salida": "z4_ap11_despegue.png" },
+    { "js": "nuevaPartida(3); ANIM=1; AJ.rotar=0; S.i=6; GR(); VM=0; pintar();", "espera": 450, "salida": "z5_marte_descenso.png" },
+    { "js": "S.i=5; GR(); pintar();", "espera": 450, "salida": "z6_marte_escudo.png" },
+    { "js": "nuevaPartida(2); ANIM=1; AJ.rotar=0; S.i=3; GR(); VM=0; pintar();", "espera": 450, "salida": "z7_artemis_luna.png" },
+    { "js": "S.i=5; GR(); pintar();", "espera": 450, "salida": "z8_artemis_regreso.png" },
+    { "js": "nuevaPartida(0); ANIM=1; AJ.rotar=0; S.i=4; GR(); VM=1; pintar();", "espera": 450, "salida": "z9_escena.png" },
+    { "js": "VM=2; pintar();", "espera": 450, "salida": "z10_trayectoria.png" },
+    { "js": "nuevaPartida(3); ANIM=1; AJ.rotar=0; S.i=6; GR(); VM=0; R3D=null; pintar();", "espera": 450, "salida": "z12_marte_resp_2d.png" },
+    { "js": "nuevaPartida(0); ANIM=1; AJ.rotar=0; S.i=4; GR(); VM=0; R3D=null; pintar();", "espera": 450, "salida": "z11_luna_resp_2d.png" }
+  ]
+}

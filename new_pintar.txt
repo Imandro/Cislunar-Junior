@@ -1,0 +1,165 @@
+/* --- Helpers de matriz para la vista libre --- */
+function matMul(a, b) {  // 4x4 row-major
+  var r = new Array(16);
+  for (var i = 0; i < 4; i++) for (var j = 0; j < 4; j++) {
+    r[i*4+j] = a[i*4]*b[j] + a[i*4+1]*b[4+j] + a[i*4+2]*b[8+j] + a[i*4+3]*b[12+j];
+  }
+  return r;
+}
+function matTranslate(tx, ty, tz) {
+  return [1,0,0,0, 0,1,0,0, 0,0,1,0, tx,ty,tz,1];
+}
+function matRotX(a) {
+  var c = Math.cos(a), s = Math.sin(a);
+  return [1,0,0,0, 0,c,s,0, 0,-s,c,0, 0,0,0,1];
+}
+function matRotY(a) {
+  var c = Math.cos(a), s = Math.sin(a);
+  return [c,0,-s,0, 0,1,0,0, s,0,c,0, 0,0,0,1];
+}
+
+/* Input state para cámara libre */
+var CAM_INPUT = { forward: 0, back: 0, left: 0, right: 0, up: 0, down: 0 };
+
+/* Actualiza la cámara en modo libre (WASD + inercia) */
+function actualizarCamaraLibre(dt, info) {
+  if (CAM_MODE !== 'free') return;
+
+  var speed = CAM_SPEED * 50 * dt;  // unidades/segundo
+  var forward = [Math.sin(YAW), 0, Math.cos(YAW)];
+  var right   = [Math.cos(YAW), 0, -Math.sin(YAW)];
+  var up      = [0, 1, 0];
+
+  // Aplicar velocidad con inercia
+  if (AJ.inerciaCam) {
+    CAM_VEL[0] = CAM_VEL[0] * 0.92 + (CAM_INPUT.forward - CAM_INPUT.back) * speed * forward[0] +
+                 (CAM_INPUT.right - CAM_INPUT.left) * speed * right[0];
+    CAM_VEL[1] = CAM_VEL[1] * 0.92 + (CAM_INPUT.up - CAM_INPUT.down) * speed * up[1];
+    CAM_VEL[2] = CAM_VEL[2] * 0.92 + (CAM_INPUT.forward - CAM_INPUT.back) * speed * forward[2] +
+                 (CAM_INPUT.right - CAM_INPUT.left) * speed * right[2];
+    CAM_POS[0] += CAM_VEL[0];
+    CAM_POS[1] += CAM_VEL[1];
+    CAM_POS[2] += CAM_VEL[2];
+  } else {
+    CAM_POS[0] += (CAM_INPUT.forward - CAM_INPUT.back) * speed * forward[0] +
+                  (CAM_INPUT.right - CAM_INPUT.left) * speed * right[0];
+    CAM_POS[1] += (CAM_INPUT.up - CAM_INPUT.down) * speed * up[1];
+    CAM_POS[2] += (CAM_INPUT.forward - CAM_INPUT.back) * speed * forward[2] +
+                  (CAM_INPUT.right - CAM_INPUT.left) * speed * right[2];
+  }
+
+  // Clamp al terreno
+  if (info.terrenoY != null) {
+    var minY = info.terrenoY + 2.0;
+    if (CAM_POS[1] < minY) CAM_POS[1] = minY;
+  }
+}
+
+/* Construye view matrix según modo */
+function buildViewMatrix(info) {
+  if (CAM_MODE === 'free') {
+    // view = R_y(-yaw) * R_x(-pitch) * T(-camPos)
+    var view = matMul(matRotY(-YAW), matRotX(-PIT));
+    view = matMul(view, matTranslate(-CAM_POS[0], -CAM_POS[1], -CAM_POS[2]));
+    return view;
+  } else {
+    // Orbital: view = T(0,0,-dist) * Rx(-pit) * Ry(-yaw) * escala(1,1,-1) * T(-foco)
+    var distCam = info.ft[1] * 2.4;
+    var focoY = info.ft[0];
+    var pitCam = PIT;
+    if (info.terrenoY != null && distCam > 0) {
+      var aire = (info.ft[0] - info.terrenoY) - 1.2;
+      pitCam = aire > 0 ? Math.min(PIT, Math.asin(Math.min(1, aire / distCam))) : Math.min(PIT, 0);
+    }
+    return { foco: [0, focoY, 0], dist: distCam, yaw: YAW, pit: pitCam };
+  }
+}
+
+function pintar() {
+  if (MODO !== 'juego' || !S) return;
+  var vis = $('visor'), cv = $('cv'), glc = $('gl');
+  if (!vis || !cv) return;
+  var d = dimensionar();
+  if (!d) return;
+  var W = d.w, H = d.h;
+  var dpr = Math.min(window.devicePixelRatio || 1, 2);
+  var bw = Math.max(1, Math.round(W * dpr)), bh = Math.max(1, Math.round(H * dpr));
+  if (cv.width !== bw || cv.height !== bh) { cv.width = bw; cv.height = bh; }
+  var X = cv.getContext('2d');
+  X.setTransform(dpr, 0, 0, dpr, 0, 0);
+  var nomVis = M[S.m].v;
+
+  if (VM === 0) {
+    var info = escena3D();
+    MD2.info[info.set].nom = info.nom;
+    nomVis = info.nom;
+
+    // Actualizar cámara libre si está activa
+    var now = performance.now() / 1000;
+    if (!pintar._lastTime) pintar._lastTime = now;
+    var dt = now - pintar._lastTime;
+    pintar._lastTime = now;
+    actualizarCamaraLibre(dt, info);
+
+    var viewParams = buildViewMatrix(info);
+    var distCam, pitCam, fovG, asp;
+
+    if (R3D) {
+      glc.style.display = 'block';
+      asp = R3D.ajustar(W, H);
+      R3D.fondo(4, 7, 12);
+      fovG = 2 * Math.atan(1 / (4.128 * ZM));
+
+      var geo = [];
+      geo.push({ clave: 'estrellas', polys: FONDO.estrellas });
+      if (info.terreno) geo.push({ clave: 's-' + info.terreno, polys: FONDO[info.terreno] });
+      if (info.planeta) {
+        var fp = info.planeta === 'tierra' ? 1 : info.planeta === 'luna' ? 0.66 : 0.95;
+        var tf = Math.tan(fovG / 2), DP = 900;
+        var px = 0.68 * asp * tf, py = 0.6 * tf, pl = Math.sqrt(px * px + py * py + 1);
+        geo.push({
+          clave: 'p-' + info.planeta, polys: FONDO[info.planeta],
+          off: [px / pl * DP, py / pl * DP, -DP / pl],
+          esc: DP * 0.38 * fp * tf / FONDO.planR[info.planeta]
+        });
+      }
+      geo.push({ clave: 'v-' + info.set + '-' + info.tk, polys: MD2.polys(info.set, info.t) });
+
+      if (CAM_MODE === 'free') {
+        var viewMat = viewParams;
+        R3D.dibujar(
+          { viewMatrix: viewMat, fov: fovG, aspecto: asp },
+          geo, { cielo: [4, 7, 12], niebla: 3000, brillo: 1 });
+        pitCam = PIT;
+      } else {
+        distCam = info.ft[1] * 2.4;
+        pitCam = viewParams.pit;
+        R3D.dibujar(
+          { foco: viewParams.foco, dist: viewParams.dist,
+            fov: fovG, aspecto: asp, yaw: viewParams.yaw, pit: viewParams.pit },
+          geo, { cielo: [4, 7, 12], niebla: 3000, brillo: 1 });
+      }
+      X.clearRect(0, 0, W, H);
+    } else {
+      glc.style.display = 'none';
+      var pitCam2D = (CAM_MODE === 'free') ? PIT : (viewParams.pit || PIT);
+      pintar3D2D(X, info, W, H, pitCam2D);
+    }
+
+    if (CAB) CAB.reticula(X, W, H, lecturas(), CAM_MODE);
+  } else {
+    glc.style.display = 'none';
+    X.clearRect(0, 0, W, H);
+    if (VM === 1) SCN[escenaActual()](X, W, H, ANIM, T);
+    else dibujaTrayectoria(X, W, H, S.m, c01((S.i + ANIM) / M[S.m].e.length), T);
+  }
+
+  var tg = $('vtag');
+  if (tg && tg.textContent !== nomVis) tg.textContent = nomVis;
+  var hi = $('vhint');
+  var txtHi = VM === 0 ?
+    (CAM_MODE === 'free' ? 'WASD mover · Arrastrar rotar · Rueda FOV · C alternar · R reset' :
+                           'Arrastra para rotar · rueda para acercar · C modo libre') :
+    VM === 1 ? 'Animación 2D de la fase' : 'Ruta orbital y distancia';
+  if (hi && hi.textContent !== txtHi) hi.textContent = txtHi;
+}

@@ -1,0 +1,24 @@
+{
+  "puerto": 9333,
+  "url": "http://127.0.0.1:8899/Cislunar%20Junior%20-%20Ca%C3%B1on%20Labs.html?cab=1",
+  "ancho": 1440, "alto": 810,
+  "salida": "C:/Users/Zbook de Mario/AppData/Local/Temp/capturas_cabina",
+  "esperaInicial": 5000,
+  "pasos": [
+    { "js": "pintarCabinaSola();", "espera": 1200, "salida": "c1_menu_principal.png" },
+    { "js": "CJ.CABINA.abrir('ajustes'); CJ.CTL.tomarFoco(); pintarCabinaSola();", "espera": 900, "salida": "c2_ajustes.png" },
+    { "js": "CJ.CABINA.abrir('creditos'); CJ.CTL.tomarFoco(); pintarCabinaSola();", "espera": 900, "salida": "c3_creditos.png" },
+    { "js": "CJ.CABINA.abrir('academia'); CJ.CTL.tomarFoco(); pintarCabinaSola();", "espera": 900, "salida": "c4_academia.png" },
+    { "js": "CJ.CABINA.abrir('lab'); CJ.CTL.tomarFoco(); pintarCabinaSola();", "espera": 900, "salida": "c5_laboratorio.png" },
+    { "js": "nuevaPartida(0); pintar();", "espera": 1200, "salida": "c6_ap11_decision.png" },
+    { "js": "S.elej=0; ap(0); pintar();", "espera": 1400, "salida": "c7_ap11_ascenso.png" },
+    { "js": "S.elej=0; ap(0); pintar();", "espera": 1400, "salida": "c8_ap11_tli.png" },
+    { "js": "S.elej=0; ap(0); pintar();", "espera": 1400, "salida": "c9_ap11_acople.png" },
+    { "js": "S.elej=0; ap(0); pintar();", "espera": 1400, "salida": "c10_ap11_descenso.png" },
+    { "js": "S.elej=0; ap(0); pintar();", "espera": 1400, "salida": "c11_ap11_ascenso_lm.png" },
+    { "js": "S.elej=0; ap(0); pintar();", "espera": 1400, "salida": "c12_ap11_entrada.png" },
+    { "js": "S.phase='paused'; CJ.CABINA.nav.central='pausa'; pintar();", "espera": 900, "salida": "c13_pausa.png" },
+    { "js": "S.phase='decision'; CJ.CABINA.abrir('tripulacion'); CJ.CTL.tomarFoco(); pintar();", "espera": 900, "salida": "c14_tripulacion.png" },
+    { "js": "CJ.CABINA.abrir('decision'); CJ.CTL.soltarFoco(); pintar();", "espera": 900, "salida": "c15_decision_limpia.png" }
+  ]
+}
