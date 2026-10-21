@@ -43,8 +43,7 @@ node tools\prueba_lab.js
 
 ```
 Cislunar Junior/
-├── index.html                      # entrada principal
-├── Cislunar Junior - Cañon Labs.html  # build standalone
+├── Cislunar Junior - Cañon Labs.html  # entrada principal (standalone)
 ├── js/                            # 19 módulos (orbital, vehiculo, flight, stages, mision_vuelo, cabina, cockpit, hud_flight, controls, academia, laboratorio, glcore, ...)
 ├── assets/                         # fotos NASA (dominio público)
 ├── tools/                          # pruebas, capturas CDP, guiones JSON, análisis APK
