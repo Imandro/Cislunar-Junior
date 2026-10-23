@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="17" result="Failed(Child)" total="17" passed="16" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-22 15:28:56Z" end-time="2026-10-22 15:28:57Z" duration="1.5764002">
+  <test-suite type="TestSuite" id="1021" name="Cislunar Junior" fullname="Cislunar Junior" runstate="Runnable" testcasecount="17" result="Failed" site="Child" start-time="2026-10-22 15:28:56Z" end-time="2026-10-22 15:28:57Z" duration="1.576400" total="17" passed="16" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1019" name="CislunarJunior.PlayModeTests.dll" fullname="C:/Users/Zbook de Mario/Desktop/Cislunar Junior/CislunarJunior/Library/ScriptAssemblies/CislunarJunior.PlayModeTests.dll" runstate="Runnable" testcasecount="17" result="Failed" site="Child" start-time="2026-10-22 15:28:56Z" end-time="2026-10-22 15:28:57Z" duration="1.565897" total="17" passed="16" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="20712" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="1001" name="LaunchVehiclePlayModeTests" fullname="LaunchVehiclePlayModeTests" classname="LaunchVehiclePlayModeTests" runstate="Runnable" testcasecount="17" result="Failed" site="Child" start-time="2026-10-22 15:28:56Z" end-time="2026-10-22 15:28:57Z" duration="1.563524" total="17" passed="16" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1011" name="CampaignLaunchLeavesPadWithoutFreeFlight" fullname="LaunchVehiclePlayModeTests.CampaignLaunchLeavesPadWithoutFreeFlight" methodname="CampaignLaunchLeavesPadWithoutFreeFlight" classname="LaunchVehiclePlayModeTests" runstate="Runnable" seed="1019515794" result="Passed" start-time="2026-10-22 15:28:56Z" end-time="2026-10-22 15:28:56Z" duration="0.127655" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1002" name="CockpitMainCameraExcludesExteriorLayer" fullname="LaunchVehiclePlayModeTests.CockpitMainCameraExcludesExteriorLayer" methodname="CockpitMainCameraExcludesExteriorLayer" classname="LaunchVehiclePlayModeTests" runstate="Runnable" seed="5041175" result="Passed" start-time="2026-10-22 15:28:56Z" end-time="2026-10-22 15:28:56Z" duration="0.327029" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1010" name="ControllerMovesStackAndDisablesSeparatedStage" fullname="LaunchVehiclePlayModeTests.ControllerMovesStackAndDisablesSeparatedStage" methodname="ControllerMovesStackAndDisablesSeparatedStage" classname="LaunchVehiclePlayModeTests" runstate="Runnable" seed="1241521333" result="Passed" start-time="2026-10-22 15:28:56Z" end-time="2026-10-22 15:28:56Z" duration="0.048777" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[DEBUG vehicle bounds=Center: (0.00, 3.67, 16.00), Extents: (1.89, 6.09, 1.07) radius=6.464436 root=(0.00, 2.20, 16.00)
+]]></output>
+        </test-case>
+        <test-case id="1007" name="ControlsStayInsideEducationalLimits" fullname="LaunchVehiclePlayModeTests.ControlsStayInsideEducationalLimits" methodname="ControlsStayInsideEducationalLimits" classname="LaunchVehiclePlayModeTests" runstate="Runnable" seed="762248413" result="Passed" start-time="2026-10-22 15:28:56Z" end-time="2026-10-22 15:28:56Z" duration="0.003268" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1003" name="ExteriorAndWindowUseOnlyExteriorLayer" fullname="LaunchVehiclePlayModeTests.ExteriorAndWindowUseOnlyExteriorLayer" methodname="ExteriorAndWindowUseOnlyExteriorLayer" classname="LaunchVehiclePlayModeTests" runstate="Runnable" seed="869695657" result="Passed" start-time="2026-10-22 15:28:56Z" end-time="2026-10-22 15:28:56Z" duration="0.113314" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1004" name="ExteriorCamerasHaveMetricTrackingClipRange" fullname="LaunchVehiclePlayModeTests.ExteriorCamerasHaveMetricTrackingClipRange" methodname="ExteriorCamerasHaveMetricTrackingClipRange" classname="LaunchVehiclePlayModeTests" runstate="Runnable" seed="746792979" result="Passed" start-time="2026-10-22 15:28:56Z" end-time="2026-10-22 15:28:56Z" duration="0.117078" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1012" name="ExteriorCameraStaysLockedToRocketDuringAscent" fullname="LaunchVehiclePlayModeTests.ExteriorCameraStaysLockedToRocketDuringAscent" methodname="ExteriorCameraStaysLockedToRocketDuringAscent" classname="LaunchVehiclePlayModeTests" runstate="Runnable" seed="1421791313" result="Passed" start-time="2026-10-22 15:28:56Z" end-time="2026-10-22 15:28:57Z" duration="0.129499" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1006" name="ExteriorEnvironmentMatchesMarsLandingAndFinalFrame" fullname="LaunchVehiclePlayModeTests.ExteriorEnvironmentMatchesMarsLandingAndFinalFrame" methodname="ExteriorEnvironmentMatchesMarsLandingAndFinalFrame" classname="LaunchVehiclePlayModeTests" runstate="Runnable" seed="1170876162" result="Passed" start-time="2026-10-22 15:28:57Z" end-time="2026-10-22 15:28:57Z" duration="0.121627" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1013" name="ExteriorOrbitRotatesAroundTheActiveVehicle" fullname="LaunchVehiclePlayModeTests.ExteriorOrbitRotatesAroundTheActiveVehicle" methodname="ExteriorOrbitRotatesAroundTheActiveVehicle" classname="LaunchVehiclePlayModeTests" runstate="Runnable" seed="2050748980" result="Passed" start-time="2026-10-22 15:28:57Z" end-time="2026-10-22 15:28:57Z" duration="0.118132" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1017" name="HybridStackDoesNotShowASecondOrionBeforeTranslunar" fullname="LaunchVehiclePlayModeTests.HybridStackDoesNotShowASecondOrionBeforeTranslunar" methodname="HybridStackDoesNotShowASecondOrionBeforeTranslunar" classname="LaunchVehiclePlayModeTests" runstate="Runnable" seed="1686478061" result="Failed" start-time="2026-10-22 15:28:57Z" end-time="2026-10-22 15:28:57Z" duration="0.043546" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  ICPS flame must start below its nozzle.
+  Expected: 3.1500001f +/- 0.00100000005f
+  But was:  4.12344027f
+]]></message>
+            <stack-trace><![CDATA[at LaunchVehiclePlayModeTests+<HybridStackDoesNotShowASecondOrionBeforeTranslunar>d__16.MoveNext () [0x00146] in C:\Users\Zbook de Mario\Desktop\Cislunar Junior\CislunarJunior\Assets\Tests\PlayMode\LaunchVehiclePlayModeTests.cs:421
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@80f691d4262b\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1018" name="HybridStackShowsSeparatedBoostersAndCore" fullname="LaunchVehiclePlayModeTests.HybridStackShowsSeparatedBoostersAndCore" methodname="HybridStackShowsSeparatedBoostersAndCore" classname="LaunchVehiclePlayModeTests" runstate="Runnable" seed="208935918" result="Passed" start-time="2026-10-22 15:28:57Z" end-time="2026-10-22 15:28:57Z" duration="0.039549" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1015" name="LayeredExhaustRunsOnlyDuringPoweredFlight" fullname="LaunchVehiclePlayModeTests.LayeredExhaustRunsOnlyDuringPoweredFlight" methodname="LayeredExhaustRunsOnlyDuringPoweredFlight" classname="LaunchVehiclePlayModeTests" runstate="Runnable" seed="382444366" result="Passed" start-time="2026-10-22 15:28:57Z" end-time="2026-10-22 15:28:57Z" duration="0.050038" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1008" name="OfficialSlsMeshBecomesTexturedSeparableModules" fullname="LaunchVehiclePlayModeTests.OfficialSlsMeshBecomesTexturedSeparableModules" methodname="OfficialSlsMeshBecomesTexturedSeparableModules" classname="LaunchVehiclePlayModeTests" runstate="Runnable" seed="819225726" result="Passed" start-time="2026-10-22 15:28:57Z" end-time="2026-10-22 15:28:57Z" duration="0.071088" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1016" name="PhaseTimerResetsWhenAdvancingMilestone" fullname="LaunchVehiclePlayModeTests.PhaseTimerResetsWhenAdvancingMilestone" methodname="PhaseTimerResetsWhenAdvancingMilestone" classname="LaunchVehiclePlayModeTests" runstate="Runnable" seed="454504793" result="Passed" start-time="2026-10-22 15:28:57Z" end-time="2026-10-22 15:28:57Z" duration="0.000512" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1005" name="RuntimeVehicleEffectsStayOnExteriorLayer" fullname="LaunchVehiclePlayModeTests.RuntimeVehicleEffectsStayOnExteriorLayer" methodname="RuntimeVehicleEffectsStayOnExteriorLayer" classname="LaunchVehiclePlayModeTests" runstate="Runnable" seed="1306293190" result="Passed" start-time="2026-10-22 15:28:57Z" end-time="2026-10-22 15:28:57Z" duration="0.120330" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1009" name="SeparationRequiresValidAscentState" fullname="LaunchVehiclePlayModeTests.SeparationRequiresValidAscentState" methodname="SeparationRequiresValidAscentState" classname="LaunchVehiclePlayModeTests" runstate="Runnable" seed="1441641994" result="Passed" start-time="2026-10-22 15:28:57Z" end-time="2026-10-22 15:28:57Z" duration="0.000609" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1014" name="SuppliedOrionRendersWithItsOwnSolarPanels" fullname="LaunchVehiclePlayModeTests.SuppliedOrionRendersWithItsOwnSolarPanels" methodname="SuppliedOrionRendersWithItsOwnSolarPanels" classname="LaunchVehiclePlayModeTests" runstate="Runnable" seed="1644348494" result="Passed" start-time="2026-10-22 15:28:57Z" end-time="2026-10-22 15:28:57Z" duration="0.113969" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Saving results to: C:\Users\Zbook de Mario\Desktop\Cislunar Junior\CislunarJunior\TestResults-separation-final.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

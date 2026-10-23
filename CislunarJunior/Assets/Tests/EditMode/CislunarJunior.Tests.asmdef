@@ -1,0 +1,7 @@
+{
+  "name": "CislunarJunior.Tests",
+  "references": ["CislunarJunior.Runtime"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "autoReferenced": true
+}

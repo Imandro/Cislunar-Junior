@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="6" result="Failed(Child)" total="6" passed="5" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-21 06:46:35Z" end-time="2026-10-21 06:46:35Z" duration="0.10674">
+  <test-suite type="TestSuite" id="1000" name="Cislunar Junior" fullname="Cislunar Junior" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2026-10-21 06:46:35Z" end-time="2026-10-21 06:46:35Z" duration="0.106740" total="6" passed="5" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1003" name="CislunarJunior.PlayModeTests.dll" fullname="C:/Users/Zbook de Mario/Desktop/Cislunar Junior/CislunarJunior/Library/ScriptAssemblies/CislunarJunior.PlayModeTests.dll" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2026-10-21 06:46:35Z" end-time="2026-10-21 06:46:35Z" duration="0.050444" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="6004" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="1001" name="SimulatorViewTests" fullname="SimulatorViewTests" classname="SimulatorViewTests" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2026-10-21 06:46:35Z" end-time="2026-10-21 06:46:35Z" duration="0.047609" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties>
+          <property name="platform" value="EditMode" />
+        </properties>
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1002" name="CockpitFocusKeepsTheSameInteriorAndPhaseSwitchesVehicle" fullname="SimulatorViewTests.CockpitFocusKeepsTheSameInteriorAndPhaseSwitchesVehicle" methodname="CockpitFocusKeepsTheSameInteriorAndPhaseSwitchesVehicle" classname="SimulatorViewTests" runstate="Runnable" seed="700277717" result="Failed" label="Error" start-time="2026-10-21 06:46:35Z" end-time="2026-10-21 06:46:35Z" duration="0.024887" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="platform" value="EditMode" />
+          </properties>
+          <failure>
+            <message><![CDATA[System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.
+  ----> System.NullReferenceException : Object reference not set to an instance of an object]]></message>
+            <stack-trace><![CDATA[  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <1071a2cb0cb3433aae80a793c277a048>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <1071a2cb0cb3433aae80a793c277a048>:0 
+  at SimulatorViewTests.Call (System.Object target, System.String name, System.Object[] args) [0x00000] in C:\Users\Zbook de Mario\Desktop\Cislunar Junior\CislunarJunior\Assets\Tests\PlayMode\SimulatorViewTests.cs:10 
+  at SimulatorViewTests+<CockpitFocusKeepsTheSameInteriorAndPhaseSwitchesVehicle>d__2.MoveNext () [0x0005a] in C:\Users\Zbook de Mario\Desktop\Cislunar Junior\CislunarJunior\Assets\Tests\PlayMode\SimulatorViewTests.cs:19 
+  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@1.3.3\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44 
+--NullReferenceException
+  at CislunarSimulator.SetView (ViewMode next) [0x00007] in C:\Users\Zbook de Mario\Desktop\Cislunar Junior\CislunarJunior\Assets\Scripts\CislunarSimulator.cs:77 
+  at CislunarSimulator.Focus (CockpitFocus next) [0x0000e] in C:\Users\Zbook de Mario\Desktop\Cislunar Junior\CislunarJunior\Assets\Scripts\CislunarSimulator.cs:61 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <1071a2cb0cb3433aae80a793c277a048>:0 ]]></stack-trace>
+          </failure>
+        </test-case>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1010" name="CislunarJunior.Tests.dll" fullname="C:/Users/Zbook de Mario/Desktop/Cislunar Junior/CislunarJunior/Library/ScriptAssemblies/CislunarJunior.Tests.dll" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-21 06:46:35Z" end-time="2026-10-21 06:46:35Z" duration="0.041654" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="6004" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+      </properties>
+      <test-suite type="TestFixture" id="1004" name="MissionModelTests" fullname="MissionModelTests" classname="MissionModelTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-21 06:46:35Z" end-time="2026-10-21 06:46:35Z" duration="0.040808" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties>
+          <property name="platform" value="EditMode" />
+        </properties>
+        <test-case id="1007" name="CorrectQuizUnlocksTheNextMilestone" fullname="MissionModelTests.CorrectQuizUnlocksTheNextMilestone" methodname="CorrectQuizUnlocksTheNextMilestone" classname="MissionModelTests" runstate="Runnable" seed="2145391871" result="Passed" start-time="2026-10-21 06:46:35Z" end-time="2026-10-21 06:46:35Z" duration="0.027839" asserts="0">
+          <properties>
+            <property name="platform" value="EditMode" />
+          </properties>
+        </test-case>
+        <test-case id="1005" name="FlightUsesThrottleAndConsumesFuel" fullname="MissionModelTests.FlightUsesThrottleAndConsumesFuel" methodname="FlightUsesThrottleAndConsumesFuel" classname="MissionModelTests" runstate="Runnable" seed="617934291" result="Passed" start-time="2026-10-21 06:46:35Z" end-time="2026-10-21 06:46:35Z" duration="0.005748" asserts="0">
+          <properties>
+            <property name="platform" value="EditMode" />
+          </properties>
+        </test-case>
+        <test-case id="1009" name="MarsCampaignEndsAtSurface" fullname="MissionModelTests.MarsCampaignEndsAtSurface" methodname="MarsCampaignEndsAtSurface" classname="MissionModelTests" runstate="Runnable" seed="1869440698" result="Passed" start-time="2026-10-21 06:46:35Z" end-time="2026-10-21 06:46:35Z" duration="0.000753" asserts="0">
+          <properties>
+            <property name="platform" value="EditMode" />
+          </properties>
+        </test-case>
+        <test-case id="1006" name="ResetRestoresTheSelectedMission" fullname="MissionModelTests.ResetRestoresTheSelectedMission" methodname="ResetRestoresTheSelectedMission" classname="MissionModelTests" runstate="Runnable" seed="2132275066" result="Passed" start-time="2026-10-21 06:46:35Z" end-time="2026-10-21 06:46:35Z" duration="0.001307" asserts="0">
+          <properties>
+            <property name="platform" value="EditMode" />
+          </properties>
+        </test-case>
+        <test-case id="1008" name="WrongQuizAnswerKeepsTheMilestoneLocked" fullname="MissionModelTests.WrongQuizAnswerKeepsTheMilestoneLocked" methodname="WrongQuizAnswerKeepsTheMilestoneLocked" classname="MissionModelTests" runstate="Runnable" seed="1467168837" result="Passed" start-time="2026-10-21 06:46:35Z" end-time="2026-10-21 06:46:35Z" duration="0.000312" asserts="0">
+          <properties>
+            <property name="platform" value="EditMode" />
+          </properties>
+          <output><![CDATA[Saving results to: C:\Users\Zbook de Mario\Desktop\Cislunar Junior\CislunarJunior\editmode-results.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

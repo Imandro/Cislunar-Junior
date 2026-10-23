@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="22" result="Passed" total="22" passed="22" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.0783916">
+  <test-suite type="TestSuite" id="1000" name="Cislunar Junior" fullname="Cislunar Junior" runstate="Runnable" testcasecount="22" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.078392" total="22" passed="22" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1024" name="CislunarJunior.Tests.dll" fullname="C:/Users/Zbook de Mario/Desktop/Cislunar Junior/CislunarJunior/Library/ScriptAssemblies/CislunarJunior.Tests.dll" runstate="Runnable" testcasecount="22" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.067558" total="22" passed="22" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="12688" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestFixture" id="1001" name="MissionModelTests" fullname="MissionModelTests" classname="MissionModelTests" runstate="Runnable" testcasecount="22" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.065968" total="22" passed="22" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1017" name="AssistedCampaignLeavesIgnitionWithoutManualPhaseClick" fullname="MissionModelTests.AssistedCampaignLeavesIgnitionWithoutManualPhaseClick" methodname="AssistedCampaignLeavesIgnitionWithoutManualPhaseClick" classname="MissionModelTests" runstate="Runnable" seed="251892812" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.024818" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1014" name="CampaignBlocksCoreSeparationUntilOrbitIsValid" fullname="MissionModelTests.CampaignBlocksCoreSeparationUntilOrbitIsValid" methodname="CampaignBlocksCoreSeparationUntilOrbitIsValid" classname="MissionModelTests" runstate="Runnable" seed="1962062599" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.005214" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1012" name="CampaignBlocksSrbSeparationUntilTelemetryIsValid" fullname="MissionModelTests.CampaignBlocksSrbSeparationUntilTelemetryIsValid" methodname="CampaignBlocksSrbSeparationUntilTelemetryIsValid" classname="MissionModelTests" runstate="Runnable" seed="2105551278" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.000380" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1013" name="CampaignCannotSeparateTheSameStageTwice" fullname="MissionModelTests.CampaignCannotSeparateTheSameStageTwice" methodname="CampaignCannotSeparateTheSameStageTwice" classname="MissionModelTests" runstate="Runnable" seed="1832773517" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.000408" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1010" name="CampaignExposesSrbAndCoreSeparationEvents" fullname="MissionModelTests.CampaignExposesSrbAndCoreSeparationEvents" methodname="CampaignExposesSrbAndCoreSeparationEvents" classname="MissionModelTests" runstate="Runnable" seed="1804900476" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.000463" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1016" name="CampaignFlightAdvancesTelemetryAfterIgnition" fullname="MissionModelTests.CampaignFlightAdvancesTelemetryAfterIgnition" methodname="CampaignFlightAdvancesTelemetryAfterIgnition" classname="MissionModelTests" runstate="Runnable" seed="1000978823" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.004304" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1004" name="CorrectQuizUnlocksTheNextMilestone" fullname="MissionModelTests.CorrectQuizUnlocksTheNextMilestone" methodname="CorrectQuizUnlocksTheNextMilestone" classname="MissionModelTests" runstate="Runnable" seed="805264934" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.001002" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1007" name="CountdownUnlocksLaunchAfterTenSeconds" fullname="MissionModelTests.CountdownUnlocksLaunchAfterTenSeconds" methodname="CountdownUnlocksLaunchAfterTenSeconds" classname="MissionModelTests" runstate="Runnable" seed="329716914" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.001299" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1009" name="CourseCorrectionClearsOffNominalError" fullname="MissionModelTests.CourseCorrectionClearsOffNominalError" methodname="CourseCorrectionClearsOffNominalError" classname="MissionModelTests" runstate="Runnable" seed="1876989026" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.000796" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1020" name="EarthAtmosphereReportsEachLayerByAltitude" fullname="MissionModelTests.EarthAtmosphereReportsEachLayerByAltitude" methodname="EarthAtmosphereReportsEachLayerByAltitude" classname="MissionModelTests" runstate="Runnable" seed="1239885356" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.000466" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1018" name="EmptyFuelCannotProduceThrust" fullname="MissionModelTests.EmptyFuelCannotProduceThrust" methodname="EmptyFuelCannotProduceThrust" classname="MissionModelTests" runstate="Runnable" seed="802454423" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.000390" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1002" name="FlightUsesThrottleAndConsumesFuel" fullname="MissionModelTests.FlightUsesThrottleAndConsumesFuel" methodname="FlightUsesThrottleAndConsumesFuel" classname="MissionModelTests" runstate="Runnable" seed="1565018301" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.000305" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1011" name="FreeFlightAutomaticallySeparatesStagesWhenValid" fullname="MissionModelTests.FreeFlightAutomaticallySeparatesStagesWhenValid" methodname="FreeFlightAutomaticallySeparatesStagesWhenValid" classname="MissionModelTests" runstate="Runnable" seed="1171712125" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.000537" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1023" name="FreeFlightManeuverLeavesTransferInsteadOfChargingAgain" fullname="MissionModelTests.FreeFlightManeuverLeavesTransferInsteadOfChargingAgain" methodname="FreeFlightManeuverLeavesTransferInsteadOfChargingAgain" classname="MissionModelTests" runstate="Runnable" seed="1563941817" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.000562" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1015" name="FreeFlightSeparatesStagesOnDifferentTicks" fullname="MissionModelTests.FreeFlightSeparatesStagesOnDifferentTicks" methodname="FreeFlightSeparatesStagesOnDifferentTicks" classname="MissionModelTests" runstate="Runnable" seed="735531538" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.000385" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1021" name="LunarArrivalUsesMoonButReentryReturnsToEarth" fullname="MissionModelTests.LunarArrivalUsesMoonButReentryReturnsToEarth" methodname="LunarArrivalUsesMoonButReentryReturnsToEarth" classname="MissionModelTests" runstate="Runnable" seed="1793029085" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.000278" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1022" name="LunarReturnUsesEarthEnvironment" fullname="MissionModelTests.LunarReturnUsesEarthEnvironment" methodname="LunarReturnUsesEarthEnvironment" classname="MissionModelTests" runstate="Runnable" seed="1006521038" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.000195" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1006" name="MarsCampaignEndsAtSurface" fullname="MissionModelTests.MarsCampaignEndsAtSurface" methodname="MarsCampaignEndsAtSurface" classname="MissionModelTests" runstate="Runnable" seed="85129431" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.000270" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1019" name="MarsProfileLaunchesInEarthAtmosphere" fullname="MissionModelTests.MarsProfileLaunchesInEarthAtmosphere" methodname="MarsProfileLaunchesInEarthAtmosphere" classname="MissionModelTests" runstate="Runnable" seed="1160366113" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.001500" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1008" name="NavigationManeuverConsumesFuelAndAdvances" fullname="MissionModelTests.NavigationManeuverConsumesFuelAndAdvances" methodname="NavigationManeuverConsumesFuelAndAdvances" classname="MissionModelTests" runstate="Runnable" seed="448858013" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.000383" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1003" name="ResetRestoresTheSelectedMission" fullname="MissionModelTests.ResetRestoresTheSelectedMission" methodname="ResetRestoresTheSelectedMission" classname="MissionModelTests" runstate="Runnable" seed="44756962" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.000428" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1005" name="WrongQuizAnswerKeepsTheMilestoneLocked" fullname="MissionModelTests.WrongQuizAnswerKeepsTheMilestoneLocked" methodname="WrongQuizAnswerKeepsTheMilestoneLocked" classname="MissionModelTests" runstate="Runnable" seed="19369721" result="Passed" start-time="2026-10-22 05:01:03Z" end-time="2026-10-22 05:01:03Z" duration="0.000193" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Saving results to: C:\Users\Zbook de Mario\Desktop\Cislunar Junior\CislunarJunior\TestResults-scenery-edit2.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

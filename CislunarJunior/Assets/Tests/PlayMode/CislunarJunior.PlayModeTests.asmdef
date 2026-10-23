@@ -1,0 +1,7 @@
+{
+  "name": "CislunarJunior.PlayModeTests",
+  "references": ["CislunarJunior.Runtime"],
+  "includePlatforms": [],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "autoReferenced": true
+}

@@ -1,0 +1,11 @@
+Library/
+Temp/
+Obj/
+Build/
+Logs/
+UserSettings/
+*.csproj
+*.sln
+
+# Large reference assets (not tracked)
+NASA-source/archive/legacy-assets/
